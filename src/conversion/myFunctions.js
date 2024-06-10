@@ -7,8 +7,18 @@
  * @param {string[]} inputStrings
  * @return {string|undefined}
  */
-function findFirstLongString(inputStrings) {}
+function findFirstLongString(inputStrings) {
+  console.log("Hello Sheldon, input array is ", inputStrings);
+  return inputStrings.find(isLong);
+}
 
+function isLong(oneInputString) {
+    if (oneInputString.length >= 7){
+        return true
+    }else{
+        return false
+    }
+}
 /** return the first odd number in the given array of numbers, or undefined if none is found.
  * @param {number[]} inputNumbers
  * @return {number|undefined}
@@ -62,13 +72,13 @@ function areAllNumbersOdd(inputNumbers) {}
 function areAllStringsLong(inputStrings) {}
 
 export {
-    findFirstLongString,
-    findFirstOddNumber,
-    findLastLongString,
-    findAllLongStrings,
-    findAllOddNumbers,
-    findAllTheStrings,
-    findAllPeopleWithALongName,
-    areAllNumbersOdd,
-    areAllStringsLong,
+  findFirstLongString,
+  findFirstOddNumber,
+  findLastLongString,
+  findAllLongStrings,
+  findAllOddNumbers,
+  findAllTheStrings,
+  findAllPeopleWithALongName,
+  areAllNumbersOdd,
+  areAllStringsLong,
 };
