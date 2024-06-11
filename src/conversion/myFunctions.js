@@ -23,7 +23,15 @@ function isLong(oneInputString) {
  * @param {number[]} inputNumbers
  * @return {number|undefined}
  */
-function findFirstOddNumber(inputNumbers) {}
+function findFirstOddNumber(inputNumbers) {
+    const firstOdd = inputNumbers.find(isOdd);
+    console.log("Hello Sheldon, first odd number is", firstOdd);
+    return firstOdd;
+}
+
+function isOdd(oneInputNumber){
+    return oneInputNumber % 2 === 1;
+}
 
 /** return the LAST "long" string in the given array of strings, or undefined if none is found.
  * @param {string[]} inputStrings
